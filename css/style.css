@@ -8,6 +8,7 @@
   --logo-black-color: #000000;
 }
 
+/* ----------------ALL--------------- */
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
@@ -15,7 +16,6 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-/* ALL */
 
 h1,
 h2,
@@ -39,7 +39,27 @@ ul {
 a {
   text-decoration: none;
 }
-/* INDEX */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* -----------------INDEX------------------- */
 .hero {
   background-color: var(--first-bg-color);
   text-align: center;
@@ -75,12 +95,17 @@ a {
   letter-spacing: 0.06em;
 }
 
-.features.section {
-  padding-bottom: 0;
-}
-
 .features-title {
-  display: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .features .title {
@@ -107,6 +132,10 @@ a {
 
 .features .description {
   line-height: 1.7;
+}
+
+.what-we-do.section {
+  padding-top: 0;
 }
 
 .what-we-do-list {
@@ -181,16 +210,33 @@ a {
   padding-bottom: 30px;
 }
 
-/* PORTFOLIO */
+/* --------------------------PORTFOLIO--------------------- */
 
 .portfolio-section-title {
-  display: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .filters-buttons {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+.filters-buttons .element {
+  margin-right: 8px;
+}
+
+.filters-buttons .element:last-child {
+  margin-right: 0;
 }
 
 .button {
@@ -204,7 +250,12 @@ a {
   font-size: 16px;
   line-height: 1.62;
   color: var(--title-text-color);
-  margin-right: 8px;
+}
+
+.current-button {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button:hover,
@@ -259,7 +310,7 @@ a {
   color: var(--primary-text-color);
 }
 
-/* HEADE */
+/* -------------------HEADER------------------ */
 
 header {
   border-bottom: 1px solid #ececec;
@@ -268,8 +319,8 @@ header {
 .page-header {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
 }
 
 .page-header .container {
@@ -287,9 +338,19 @@ header {
   letter-spacing: 0.02em;
 }
 
+.site-nav-list .element {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 .site-contacts {
   display: flex;
   align-items: center;
+}
+
+.site-contacts .element {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .logo {
@@ -298,11 +359,13 @@ header {
   font-weight: bold;
   font-size: 26px;
   line-height: 1.2;
+  margin-right: 93px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .logo-black {
   color: var(--logo-black-color);
-  margin-right: 93px;
 }
 
 .site-nav-list .current {
@@ -337,15 +400,16 @@ header {
   margin-right: 50px;
 }
 
-/* FOOTER */
+/* ---------------------FOOTER------------------- */
 
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--first-bg-color);
 }
 
-.page-footer {
-  background-color: var(--first-bg-color);
+.page-footer .logo {
+  margin-right: 0;
 }
 
 .logo-white {
@@ -353,11 +417,14 @@ header {
 }
 
 .footer-address {
+  margin-top: 20px;
+}
+
+.address-paragraph {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   color: var(--white-color);
-  margin-top: 20px;
 }
 
 .footer-site-contacts .element {
@@ -377,23 +444,4 @@ header {
 .header-nav:focus,
 .header-nav:hover {
   color: var(--accent-color);
-}
-
-.current-button {
-  background-color: var(--accent-color);
-  color: var(--white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
