@@ -6,6 +6,9 @@
   --secondary-bg-color: #f5f4fa;
   --first-bg-color: #2f303a;
   --logo-black-color: #000000;
+  --first-icons-color: #afb1b8;
+  --second-icons-color: #757575;
+  --icons-white-color: #ffffff;
 }
 
 /* ----------------ALL--------------- */
@@ -210,6 +213,85 @@ img {
   padding-bottom: 30px;
 }
 
+/* ------------------------------ICONS------------------------------ */
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--first-icons-color);
+}
+
+.social {
+  display: flex;
+  padding-right: 32px;
+  padding-left: 32px;
+  margin-top: 16px;
+}
+
+.social .element {
+  margin-right: 10px;
+}
+
+.social .element:last-child {
+  margin-right: 0;
+}
+
+.social .link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social .link:hover,
+.social .link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.social .link:hover .social-icon,
+.social .link:focus .social-icon {
+  fill: var(--icons-white-color);
+}
+
+.mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--second-icons-color);
+}
+
+.tel-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--second-icons-color);
+}
+
+.header-contacts:hover .tel-icon,
+.header-contacts:focus .tel-icon,
+.header-contacts:hover .mail-icon,
+.header-contacts:focus .mail-icon {
+  fill: var(--accent-color);
+}
+
+.features-lable {
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 30px;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: 25px;
+  left: 100px;
+}
+
 /* --------------------------PORTFOLIO--------------------- */
 
 .portfolio-section-title {
@@ -334,7 +416,7 @@ header {
 
 .site-nav-list {
   display: flex;
-  margin-right: 331px;
+  margin-right: 305px;
   letter-spacing: 0.02em;
 }
 
@@ -346,11 +428,16 @@ header {
 .site-contacts {
   display: flex;
   align-items: center;
+  letter-spacing: 0.02em;
 }
 
 .site-contacts .element {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+.site-contacts .mail {
+  margin-right: 30px;
 }
 
 .logo {
@@ -390,14 +477,24 @@ header {
   font-weight: 500;
   line-height: 1.2;
   color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
 }
 
-.site-contacts {
-  letter-spacing: 0.02em;
+/* -------------------------CLIENTS----------------------- */
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
 }
 
-.site-contacts .mail {
-  margin-right: 50px;
+.clients-list {
+  display: flex;
 }
 
 /* ---------------------FOOTER------------------- */
